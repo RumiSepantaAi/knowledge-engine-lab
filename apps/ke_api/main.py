@@ -36,6 +36,26 @@ app = FastAPI(
 )
 
 
+@app.on_event("startup")
+def check_schema_on_startup() -> None:
+    """Check if database schema is initialized on startup."""
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT EXISTS (
+                        SELECT 1 FROM information_schema.tables 
+                        WHERE table_schema = 'evidence' AND table_name = 'document'
+                    )
+                """)
+                schema_exists = cur.fetchone()[0]
+                if not schema_exists:
+                    print("⚠️  WARNING: Database schema not initialized.")
+                    print("   Run: make db-migrate")
+    except Exception as e:
+        print(f"⚠️  WARNING: Could not connect to database: {e}")
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Health Check
 # ─────────────────────────────────────────────────────────────────────────────

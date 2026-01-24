@@ -48,9 +48,16 @@ cp .env.example .env
 # Start PostgreSQL with pgvector
 make db-up
 
-# Verify connection
+# Run database migrations (required on first setup)
+make db-migrate
+
+# Verify connection and schema
 make db-psql
 ```
+
+> **Note**: The Knowledge Engine uses two PostgreSQL schemas:
+> - `meta` — Taxonomy, glossary, and control definitions
+> - `evidence` — Documents, claims, chunks, and evidence spans
 
 ### 4. Run Tests
 

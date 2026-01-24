@@ -50,6 +50,25 @@ def status() -> None:
                 cur.execute("SELECT 1")
                 console.print("  Database: [green]✅ Connected[/green]")
 
+                # Check if schema exists
+                cur.execute("""
+                    SELECT EXISTS (
+                        SELECT 1 FROM information_schema.tables 
+                        WHERE table_schema = 'evidence' AND table_name = 'document'
+                    )
+                """)
+                schema_exists = cur.fetchone()[0]
+
+                if not schema_exists:
+                    console.print("  Schema: [red]❌ Missing[/red]")
+                    console.print(
+                        "\n  [yellow]⚠️  Database schema not initialized.[/yellow]"
+                    )
+                    console.print("  Run: [bold cyan]make db-migrate[/bold cyan]")
+                    return
+
+                console.print("  Schema: [green]✅ Initialized[/green]")
+
                 # Count documents
                 cur.execute("SELECT COUNT(*) FROM evidence.document")
                 doc_count = cur.fetchone()[0]
