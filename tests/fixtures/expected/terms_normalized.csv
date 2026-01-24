@@ -1,0 +1,13 @@
+taxon_path,level1,level2,level3,term_raw,term_norm,term_id,taxon_id,source_file,row_index
+AI > Deep Learning > Neural Networks,AI,Deep Learning,Neural Networks,CNN,CNN,f7e8d9c0-1234-5678-9abc-def012345678,a1b2c3d4-5678-5abc-def0-123456789abc,sample_taxonomy.csv,4
+AI > Deep Learning > Neural Networks,AI,Deep Learning,Neural Networks,RNN,RNN,e6d7c8b9-2345-5789-abcd-ef0123456789,a1b2c3d4-5678-5abc-def0-123456789abc,sample_taxonomy.csv,4
+AI > Deep Learning > Neural Networks,AI,Deep Learning,Neural Networks,Transformer (Attention; Self-Attention),Transformer (Attention; Self-Attention),d5c6b7a8-3456-589a-bcde-f01234567890,a1b2c3d4-5678-5abc-def0-123456789abc,sample_taxonomy.csv,4
+AI > Machine Learning > Supervised,AI,Machine Learning,Supervised,Linear Regression,Linear Regression,c4b5a697-4567-59ab-cdef-012345678901,b2c3d4e5-6789-5bcd-ef01-23456789abcd,sample_taxonomy.csv,2
+AI > Machine Learning > Supervised,AI,Machine Learning,Supervised,Logistic Regression,Logistic Regression,b3a49586-5678-5abc-def0-123456789012,b2c3d4e5-6789-5bcd-ef01-23456789abcd,sample_taxonomy.csv,2
+AI > Machine Learning > Unsupervised,AI,Machine Learning,Unsupervised,3-Layer Vector DB (Evidence; Implication; Playbook),3-Layer Vector DB (Evidence; Implication; Playbook),a2938475-6789-5bcd-ef01-234567890123,c3d4e5f6-789a-5cde-f012-3456789abcde,sample_taxonomy.csv,3
+AI > Machine Learning > Unsupervised,AI,Machine Learning,Unsupervised,K-Means,K-Means,91827364-789a-5cde-f012-345678901234,c3d4e5f6-789a-5cde-f012-3456789abcde,sample_taxonomy.csv,3
+Data > Processing > ETL,Data,Processing,ETL,Airflow,Airflow,80716253-89ab-5def-0123-456789012345,d4e5f6a7-89ab-5def-0123-456789abcdef,sample_taxonomy.csv,7
+Data > Processing > ETL,Data,Processing,ETL,Apache Spark,Apache Spark,7f605142-9abc-5ef0-1234-567890123456,d4e5f6a7-89ab-5def-0123-456789abcdef,sample_taxonomy.csv,7
+Data > Storage > Databases,Data,Storage,Databases,MongoDB,MongoDB,6e5f4031-abcd-5f01-2345-678901234567,e5f6a7b8-9abc-5ef0-1234-56789abcdef0,sample_taxonomy.csv,5
+Data > Storage > Databases,Data,Storage,Databases,PostgreSQL,PostgreSQL,5d4e3f20-bcde-5012-3456-789012345678,e5f6a7b8-9abc-5ef0-1234-56789abcdef0,sample_taxonomy.csv,5
+Data > Storage > Databases,Data,Storage,Databases,PostgreSQL,PostgreSQL,5d4e3f20-bcde-5012-3456-789012345678,e5f6a7b8-9abc-5ef0-1234-56789abcdef0,sample_taxonomy.csv,6

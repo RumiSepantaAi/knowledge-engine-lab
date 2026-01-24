@@ -1,0 +1,12 @@
+level_1,level_2,level_3,level_4
+AI,Deep Learning,Neural Networks,CNN
+AI,Deep Learning,Neural Networks,RNN
+AI,Deep Learning,Neural Networks,Transformer (Attention; Self-Attention)
+AI,Machine Learning,Supervised,Linear Regression
+AI,Machine Learning,Supervised,Logistic Regression
+AI,Machine Learning,Unsupervised,3-Layer Vector DB (Evidence; Implication; Playbook)
+AI,Machine Learning,Unsupervised,K-Means
+Data,Processing,ETL,Airflow
+Data,Processing,ETL,Apache Spark
+Data,Storage,Databases,MongoDB
+Data,Storage,Databases,PostgreSQL

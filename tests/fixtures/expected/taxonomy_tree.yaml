@@ -1,0 +1,22 @@
+AI:
+  Deep Learning:
+    Neural Networks:
+    - CNN
+    - RNN
+    - Transformer (Attention; Self-Attention)
+  Machine Learning:
+    Supervised:
+    - Linear Regression
+    - Logistic Regression
+    Unsupervised:
+    - 3-Layer Vector DB (Evidence; Implication; Playbook)
+    - K-Means
+Data:
+  Processing:
+    ETL:
+    - Airflow
+    - Apache Spark
+  Storage:
+    Databases:
+    - MongoDB
+    - PostgreSQL

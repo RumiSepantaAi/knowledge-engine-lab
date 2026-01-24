@@ -1,0 +1,28 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Knowledge Engine - PostgreSQL with pgvector
+# ─────────────────────────────────────────────────────────────────────────────
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.1-pg16-trixie
+    container_name: ke_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-knowledge_engine}
+      POSTGRES_USER: ${POSTGRES_USER:-ke_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ke_postgres_data:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+      - ./migrations:/migrations:ro
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ke_user} -d ${POSTGRES_DB:-knowledge_engine}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  ke_postgres_data:
+    name: ke_postgres_data
