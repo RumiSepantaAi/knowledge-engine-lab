@@ -1,5 +1,5 @@
 # AI Knowledge Engine Control Plane
-
+![Static Badge](https://img.shields.io/badge/Portfolio_Demo-success)
 A production-grade foundation for managing knowledge graphs with Meta-Graph taxonomy and Evidence-Graph provenance.
 
 ## Overview
