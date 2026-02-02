@@ -143,6 +143,6 @@ make ui
 1. Install pre-commit hooks: `pre-commit install`
 2. Run linting before commits: `make lint`
 3. Ensure tests pass: `make test`
-## License
 
-MIT License
+
+> ⚠️ **Portfolio Demo:** This repository is a personal showcase.
